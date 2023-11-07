@@ -1,24 +1,4 @@
-# Shell Protocol audit details
-- Total Prize Pool: $36,500 USDC 
-  - HM awards: $24,750 USDC 
-  - Analysis awards: $1,500 USDC 
-  - QA awards: $750 USDC 
-  - Bot Race awards: $2,250 USDC 
-  - Gas awards: $750 USDC 
-  - Judge awards: $3,600 USDC 
-  - Lookout awards: $2,400 USDC 
-  - Scout awards: $500 USDC 
-- Join [C4 Discord](https://discord.gg/code4rena) to register
-- Submit findings [using the C4 form](https://code4rena.com/contests/2023-08-shell-protocol/submit)
-- [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
-- Starts August 21, 2023 20:00 UTC
-- Ends August 28, 2023 20:00 UTC
-
-## Automated Findings / Publicly Known Issues
-
-Automated findings output for the audit can be found [here](https://github.com/code-423n4/2023-08-shell/blob/main/bot-report.md) within 24 hours of audit opening.
-
-*Note for C4 wardens: Anything included in the automated findings output is considered a publicly known issue and is ineligible for awards.*
+# Shell Protocol audit
 
 ### Known behaviors which are out of scope for the audit(automated findings / publicly known issues)
 
@@ -39,14 +19,14 @@ Automated findings output for the audit can be found [here](https://github.com/c
 
 | Contract | SLOC | Purpose | Libraries used |  
 | ----------- | ----------- | ----------- | ----------- |
-| [src/proteus/EvolvingProteus.sol](https://github.com/code-423n4/2023-08-shell/blob/main/src/proteus/EvolvingProteus.sol) | 460 | This amm primitive contract can passively update liquidity concentration over time | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) & [`abdk-libraries-solidity/*`](https://github.com/abdk-consulting/abdk-libraries-solidity) |
+| EvolvingProteus.sol | 460 | This amm primitive contract can passively update liquidity concentration over time | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) & [`abdk-libraries-solidity/*`](https://github.com/abdk-consulting/abdk-libraries-solidity) |
 
 ## Out of scope
 
 * All contracts under `src/ocean`
 * All contracts under `src/mocks`
-* [src/proteus/LiquidityPoolProxy.sol](https://github.com/code-423n4/2023-08-shell/blob/main/src/proteus/LiquidityPoolProxy.sol)
-* [src/proteus/LiquidityPool](https://github.com/code-423n4/2023-08-shell/blob/main/src/proteus/LiquidityPool.sol)
+*  LiquidityPoolProxy.sol
+*  LiquidityPool.sol
 
 ## Links
 
@@ -198,7 +178,7 @@ Evolving Proteus has 6 methods that are called via the ocean:
 ```
 
 ## Testing
-The tests are located [here](https://github.com/code-423n4/2023-08-shell/tree/main/src/test)
+The tests are located src/test
 
 You need foundry to run the tests, which you can install [here](https://onbjerg.github.io/foundry-book/getting-started/installation.html)
 
