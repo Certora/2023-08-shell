@@ -1,6 +1,6 @@
 # Shell Protocol audit
 
-### Known behaviors which are out of scope for the audit(automated findings / publicly known issues)
+### Known behaviors which are out of scope for the audit
 
 * Errors already described
   * Failure when deploying a pool with incorrect prices (see above)
